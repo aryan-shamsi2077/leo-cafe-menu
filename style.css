@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'ANegaarBold';
+    text-align: right;
+}
+
+@font-face{
+    font-family: 'ANegaar';
+    src: url(font/ANegaar_BS360.NET/ANegaar.ttf);
+}
+
+@font-face{
+    font-family: 'ANegaarBold';
+    src: url(font/ANegaar_BS360.NET/ANegaarBold.ttf);
+}
+
+:root{
+    --primary-color: #452810;
+    --secondary-color: #f4f5f7;
+    --tertiary-color: #cf9e76;
+    --quaternary-color: #7e5f45;
+    --quinary-color: #989291;
+    --text-color: #161318;
+}
+
+nav{
+    background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), 
+    url("images/nav-background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
+}
+
+.nav-topsec{
+    padding: 20px 20px 0 20px ;
+}
+
+.nav-topsec-ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-topsec-li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img{
+    width: 45px;
+}
+
+.location p{
+    color: var(--text-color);
+    font-size: 16px;
+    margin-right: 3px;
+}
+
+.nav-searchsec{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.nav-search-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-color);
+    padding: 7px 15px 7px 10px;
+    border-radius: 50px;
+    margin-left: 15px;
+}
+
+.search-icon-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--tertiary-color);
+    border-radius: 50px;
+    padding: 10px 10px;
+    cursor: pointer;
+}
+
+.search-icon{
+    width: 25px;
+    height: 25px;
+}
+
+.search{
+    width: 250px;
+    height: 40px;
+    margin-left: 5px;
+    background-color: var(--secondary-color);
+    border: none;
+    font-size: 20px;
+    text-align: right;
+}
+
+.search:focus{
+    outline: none;
+}
+
+.shopping-icon{
+    width: 25px;
+    height: 25px;
+    color: var(--text-color);
+    margin-bottom: 5px;
+}
+
+.location-icon{
+    width: 20px;
+    height: 20px;
+    margin-bottom: 5px;
+    color: var(--tertiary-color);
+}
+
+.cateogries-container{
+    margin: 20px 30px;
+}
+
+.cateogries-ul{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-top: 20px;
+}
