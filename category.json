@@ -1,0 +1,114 @@
+{
+    "category": {
+
+        "hotDrink": {
+        
+            "espresso": {
+                "name": "اسپرسو سینگل",
+                "price": "30",
+                "volume": "70ML",
+                "imgSrc": "images/hotDrinkImg/espresso_single.png"
+            },
+        
+            "espressoDouble": {
+                "name": "اسپرسو دوبل",
+                "price": "40",
+                "volume": "140ML",
+                "imgSrc": "images/hotDrinkImg/espresso_double.png"
+            },
+        
+            "cappuccino": {
+                "name": "کاپوچینو",
+                "price": "65",
+                "volume": "240ML",
+                "imgSrc": "images/hotDrinkImg/cappuccino.png"
+            },
+        
+            "latte": {
+                "name": "لته",
+                "price": "70",
+                "volume": "240ML",
+                "imgSrc": "images/hotDrinkImg/latte.png"
+            },
+        
+            "caramelMacchiato": {
+                "name": "کارامل ماکیاتو",
+                "price": "75",
+                "volume": "240ML",
+                "imgSrc": "images/hotDrinkImg/caramel_macchiato.png"
+            },
+        
+            "flatWhite": {
+                "name": "فلت وایت",
+                "price": "60",
+                "volume": "240ML",
+                "imgSrc": "images/hotDrinkImg/flat_white.png"
+            },
+        
+            "mocha": {
+                "name": "موکا",
+                "price": "70",
+                "volume": "240ML",
+                "imgSrc": "images/hotDrinkImg/mocha.png"
+            },
+        
+            "affogato": {
+                "name": "آفوگاتو",
+                "price": "65",
+                "volume": "140ML",
+                "imgSrc": "images/hotDrinkImg/affogato.png"
+            },
+        
+            "americano": {
+                "name": "آمریکانو",
+                "price": "45",
+                "volume": "240ML",
+                "imgSrc": "images/hotDrinkImg/americano.png"
+            },
+        
+            "turkishCoffee": {
+                "name": "قهوه ترک",
+                "price": "45",
+                "volume": "100ML",
+                "imgSrc": "images/hotDrinkImg/turkish_coffee.png"
+            },
+        
+            "romano": {
+                "name": "رومانو",
+                "price": "50",
+                "volume": "120ML",
+                "imgSrc": "images/hotDrinkImg/romano.png"
+            },
+        
+            "hotChocolate": {
+                "name": "هات چاکلت",
+                "price": "60",
+                "volume": "240ML",
+                "imgSrc": "images/hotDrinkImg/hot_chocolate.png"
+            },
+        
+            "nutellaMilk": {
+                "name": "شیر نوتلا داغ",
+                "price": "75",
+                "volume": "240ML",
+                "imgSrc": "images/hotDrinkImg/nutella_milk.png"
+            },
+        
+            "nescafeMilk": {
+                "name": "شیر نسکافه",
+                "price": "70",
+                "volume": "240ML",
+                "imgSrc": "images/hotDrinkImg/nescafe_milk.png"
+            },
+        
+            "chaiMasala": {
+                "name": "چای ماسالا",
+                "price": "65",
+                "volume": "240ML",
+                "imgSrc": "images/hotDrinkImg/chai_masala.png"
+            }
+       
+        }
+   
+    }
+}
