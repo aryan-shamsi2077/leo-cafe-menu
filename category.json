@@ -1,113 +1,353 @@
 {
     "category": {
 
-        "hotDrink": [        
+        "hotCoffee": [        
             {
                 "name": "اسپرسو سینگل",
                 "price": "30",
                 "volume": "70ML",
-                "imgSrc": "images/hotDrinkImg/Clipped_image_20250415_121007.png"
+                "imgSrc": "images/latte-pic.png"
             },
         
             {
                 "name": "اسپرسو دوبل",
                 "price": "40",
                 "volume": "140ML",
-                "imgSrc": "images/hotDrinkImg/Clipped_image_20250422_021222.png"
+                "imgSrc": "images/latte-pic.png"
             },
         
             {
                 "name": "کاپوچینو",
                 "price": "65",
                 "volume": "240ML",
-                "imgSrc": "images/hotDrinkImg/Clipped_image_20250422_021241.png"
+                "imgSrc": "images/latte-pic.png"
             },
         
             {
                 "name": "لته",
                 "price": "70",
                 "volume": "240ML",
-                "imgSrc": "images/hotDrinkImg/Clipped_image_20250422_021646.png"
+                "imgSrc": "images/latte-pic.png"
             },
         
             {
                 "name": "کارامل ماکیاتو",
                 "price": "75",
                 "volume": "240ML",
-                "imgSrc": "images/hotDrinkImg/Clipped_image_20250422_021651.png"
+                "imgSrc": "images/latte-pic.png"
             },
         
             {
                 "name": "فلت وایت",
                 "price": "60",
                 "volume": "240ML",
-                "imgSrc": "images/hotDrinkImg/Clipped_image_20250422_021703.png"
+                "imgSrc": "images/latte-pic.png"
             },
         
             {
                 "name": "موکا",
                 "price": "70",
                 "volume": "240ML",
-                "imgSrc": "images/hotDrinkImg/Clipped_image_20250422_021712.png"
+                "imgSrc": "images/latte-pic.png"
             },
         
             {
                 "name": "آفوگاتو",
                 "price": "65",
                 "volume": "140ML",
-                "imgSrc": "images/hotDrinkImg/Clipped_image_20250422_021712.png"
+                "imgSrc": "images/latte-pic.png"
             },
         
             {
                 "name": "آمریکانو",
                 "price": "45",
                 "volume": "240ML",
-                "imgSrc": "images/hotDrinkImg/Clipped_image_20250422_021712.png"
+                "imgSrc": "images/latte-pic.png"
             },
         
             {
                 "name": "قهوه ترک",
                 "price": "45",
                 "volume": "100ML",
-                "imgSrc": "images/hotDrinkImg/Clipped_image_20250422_021712.png"
+                "imgSrc": "images/latte-pic.png"
             },
         
             {
                 "name": "رومانو",
                 "price": "50",
                 "volume": "120ML",
-                "imgSrc": "images/hotDrinkImg/Clipped_image_20250422_021712.png"
+                "imgSrc": "images/latte-pic.png"
             },
         
             {
                 "name": "هات چاکلت",
                 "price": "60",
                 "volume": "240ML",
-                "imgSrc": "images/hotDrinkImg/Clipped_image_20250422_021712.png"
+                "imgSrc": "images/latte-pic.png"
             },
         
             {
                 "name": "شیر نوتلا داغ",
                 "price": "75",
                 "volume": "240ML",
-                "imgSrc": "images/hotDrinkImg/Clipped_image_20250422_021712.png"
+                "imgSrc": "images/latte-pic.png"
             },
         
             {
                 "name": "شیر نسکافه",
                 "price": "70",
                 "volume": "240ML",
-                "imgSrc": "images/hotDrinkImg/Clipped_image_20250422_021712.png"
+                "imgSrc": "images/latte-pic.png"
             },
         
             {
                 "name": "چای ماسالا",
                 "price": "65",
                 "volume": "240ML",
-                "imgSrc": "images/hotDrinkImg/Clipped_image_20250422_021712.png"
+                "imgSrc": "images/latte-pic.png"
             }
        
+        ],
+
+        "coldCoffee": [        
+            {
+                "name": "آیس لته",
+                "price": "70",
+                "volume": "100ML",
+                "imgSrc": "images/latte-pic.png"
+            },
+        
+            {
+                "name": "آیس کارامل",
+                "price": "75",
+                "volume": "120ML",
+                "imgSrc": "images/latte-pic.png"
+            },
+        
+            {
+                "name": "آیس موکا",
+                "price": "65",
+                "volume": "240ML",
+                "imgSrc": "images/latte-pic.png"
+            },
+        
+            {
+                "name": "آیس موکا",
+                "price": "55",
+                "volume": "240ML",
+                "imgSrc": "images/latte-pic.png"
+            },
+        
+            {
+                "name": "فراپاچیتو",
+                "price": "80",
+                "volume": "240ML",
+                "imgSrc": "images/latte-pic.png"
+            }
+        ],
+
+        "coldDrink": [        
+            {
+                "name": "شیک موز",
+                "price": "200",
+                "volume": "200ML",
+                "imgSrc": "images/latte-pic.png"
+            },
+        
+            {
+                "name": "سموتی توت فرنگی",
+                "price": "180",
+                "volume": "200ML",
+                "imgSrc": "images/latte-pic.png"
+            },
+        
+            {
+                "name": "لیموناد نعنا ",
+                "price": "130",
+                "volume": "240ML",
+                "imgSrc": "images/latte-pic.png"
+            },
+        
+            {
+                "name": " چای سرد هل",
+                "price": "130",
+                "volume": "200ML",
+                "imgSrc": "images/latte-pic.png"
+            },
+        
+            {
+                "name": "میلک‌شیک شکلاتی ",
+                "price": "75",
+                "volume": "240ML",
+                "imgSrc": "images/latte-pic.png"
+            },
+        
+            {
+                "name": "فلت وایت",
+                "price": "60",
+                "volume": "240ML",
+                "imgSrc": "images/latte-pic.png"
+            },
+        
+            {
+                "name": "آب‌میوه طبیعی ",
+                "price": "70",
+                "volume": "240ML",
+                "imgSrc": "images/latte-pic.png"
+            },
+        
+            {
+                "name": "اسموتی انبه و نارگیل ",
+                "price": "65",
+                "volume": "140ML",
+                "imgSrc": "images/latte-pic.png"
+            }      
+        ],
+
+        
+        "hotDrink": [        
+            {
+                "name": "چای شیرین",
+                "price": "70",
+                "volume": "180ML",
+                "imgSrc": "images/latte-pic.png"
+            },
+        
+            {
+                "name": "هات چاکلت",
+                "price": "180",
+                "volume": "200ML",
+                "imgSrc": "images/latte-pic.png"
+            },
+        
+            {
+                "name": "چای نعنا",
+                "price": "130",
+                "volume": "240ML",
+                "imgSrc": "images/latte-pic.png"
+            },
+        
+            {
+                "name": "زنجبیل‌لیمو",
+                "price": "130",
+                "volume": "200ML",
+                "imgSrc": "images/latte-pic.png"
+            },
+        
+            {
+                "name": "چای دارچین",
+                "price": "75",
+                "volume": "240ML",
+                "imgSrc": "images/latte-pic.png"
+            }
+        ],
+
+        "pizza": [        
+            {
+                "name": "پیتزا مارجاریتا",
+                "price": "360",
+                "volume": "180ML",
+                "imgSrc": "images/latte-pic.png"
+            },
+        
+            {
+                "name": "پیتزا پپرونی",
+                "price": "180",
+                "volume": "200ML",
+                "imgSrc": "images/latte-pic.png"
+            },
+        
+            {
+                "name": "پیتزا مخلوط",
+                "price": "130",
+                "volume": "240ML",
+                "imgSrc": "images/latte-pic.png"
+            },
+        
+            {
+                "name": "پیتزا هاوایی ",
+                "price": "130",
+                "volume": "200ML",
+                "imgSrc": "images/latte-pic.png"
+            },
+        
+            {
+                "name": "پیتزا چهار پنیر",
+                "price": "75",
+                "volume": "240ML",
+                "imgSrc": "images/latte-pic.png"
+            }
+        ],
+
+        "Waffle": [        
+            {
+                "name": "وافل بلژیکی",
+                "price": "360",
+                "volume": "180ML",
+                "imgSrc": "images/latte-pic.png"
+            },
+            
+            {
+                "name": "وافل شکلاتی",
+                "price": "180",
+                "volume": "200ML",
+                "imgSrc": "images/latte-pic.png"
+            },
+            
+            {
+                "name": "وافل میوه ای",
+                "price": "130",
+                "volume": "240ML",
+                "imgSrc": "images/latte-pic.png"
+            },
+            
+            {
+                "name": "وافل بستنی",
+                "price": "130",
+                "volume": "200ML",
+                "imgSrc": "images/latte-pic.png"
+            },
+            
+            {
+                "name": "وافل دارچینی",
+                "price": "75",
+                "volume": "240ML",
+                "imgSrc": "images/latte-pic.png"
+            }
+        ],
+
+        "pasta": [
+            {
+                "name": "پاستا پنه آلفردو",
+                "price": "420",
+                "volume": "180ML",
+                "imgSrc": "images/latte-pic.png"
+            },
+            {
+                "name": "پاستا اسپاگتی بولونزه",
+                "price": "380",
+                "volume": "200ML",
+                "imgSrc": "images/latte-pic.png"
+            },
+            {
+                "name": "پاستا فتوچینی سبزیجات",
+                "price": "350",
+                "volume": "240ML",
+                "imgSrc": "images/latte-pic.png"
+            },
+            {
+                "name": "پاستا لازانیا کلاسیک",
+                "price": "450",
+                "volume": "200ML",
+                "imgSrc": "images/latte-pic.png"
+            },
+            {
+                "name": "پاستا راویولی پنیر",
+                "price": "400",
+                "volume": "240ML",
+                "imgSrc": "images/latte-pic.png"
+            }
         ]
-   
+
     }
 }

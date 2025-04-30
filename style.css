@@ -163,6 +163,7 @@ nav{
     background-color: var(--secondary-color);
     color: var(--text-color);
     padding: 10px 15px;
+    border: none;
     border-radius: 25px;
     margin-right: 10px; 
 }
