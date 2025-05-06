@@ -247,35 +247,35 @@
                 "name": "پیتزا مارجاریتا",
                 "price": "360",
                 "volume": "180ML",
-                "imgSrc": "images/latte-pic.png"
+                "imgSrc": "images/pizza.png"
             },
         
             {
                 "name": "پیتزا پپرونی",
                 "price": "180",
                 "volume": "200ML",
-                "imgSrc": "images/latte-pic.png"
+                "imgSrc": "images/pizza.png"
             },
         
             {
                 "name": "پیتزا مخلوط",
                 "price": "130",
                 "volume": "240ML",
-                "imgSrc": "images/latte-pic.png"
+                "imgSrc": "images/pizza.png"
             },
         
             {
                 "name": "پیتزا هاوایی ",
                 "price": "130",
                 "volume": "200ML",
-                "imgSrc": "images/latte-pic.png"
+                "imgSrc": "images/pizza.png"
             },
         
             {
                 "name": "پیتزا چهار پنیر",
                 "price": "75",
                 "volume": "240ML",
-                "imgSrc": "images/latte-pic.png"
+                "imgSrc": "images/pizza.png"
             }
         ],
 
