@@ -1,4 +1,3 @@
-// تنظیمات سوایپر
 const swiper = new Swiper(".mySwiper", {
     slidesPerView: "auto",
     centeredSlides: true,
@@ -6,15 +5,9 @@ const swiper = new Swiper(".mySwiper", {
     pagination: { el: ".swiper-pagination", clickable: true }
 });
 
-// مقداردهی اولیه
-fetch("category.json")
-    .then(res => res.json())
-    .then(data => {
-        setupCategoryButtons(data);
-        // نمایش دسته پیش‌فرض
-        renderItems(data.category.hotCoffee, 'hotCoffee');
-    })
-    .catch(err => console.error("خطا در بارگذاری منو:", err));
+async function fetchMenuData() {
+    try {
+        const response = await fetch('category.json');
 
 // مدیریت تم‌ها
 const themes = {
