@@ -25,7 +25,7 @@ async function fetchMenuData() {
 
 fetchMenuData().then(data => {
     if (data) {
-        console.log(data.categories);
+        console.log(data.categories[0].items);
         // renderCategories(data.categories);   
         renderCategories(data.categories)
         renderProducts(data.categories[0].items);
@@ -34,7 +34,7 @@ fetchMenuData().then(data => {
     }
 });
 
-function renderCategories(categories) {
+function renderCategories(categories, index) {
     const categoriesUl = document.querySelector(".categories-ul");
     categoriesUl.innerHTML = '';
 
@@ -47,6 +47,11 @@ function renderCategories(categories) {
             </button>
         `;
         categoriesUl.appendChild(li);
+
+        if(index === 0) {
+            document.body.className = category.theme;
+        }
+
     });
 }
 
@@ -55,6 +60,9 @@ document.querySelector('.categories-ul').addEventListener('click', async (e) => 
         const categoryId = e.target.closest('.category-item-inner').dataset.categoryId;
         const data = await fetchMenuData();
         const selectedCategory = data.categories.find(cat => cat.id === categoryId);
+
+        document.body.className = selectedCategory.theme;
+
         renderProducts(selectedCategory.items);
     }
 });
