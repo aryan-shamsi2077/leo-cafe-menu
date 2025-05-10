@@ -52,6 +52,78 @@
     --second-text-color: #ffffff;
 }
 
+.second-theme{
+    --primary-color: #593416;
+    --secondary-color: #f4f5f7;
+    --tertiary-color: #cf9e76;
+    --quaternary-color: #846f5d;
+    --text-color: #161318;
+    --search-text-color: #685b4f;
+    --volume-color: #d2b39a;
+    --second-text-color: #ffffff;
+}
+.third-theme{
+    --primary-color: #006D77;
+    --secondary-color: #EDF6F9;
+    --tertiary-color: #83C5BE;
+    --quaternary-color: #C4D8D7;
+    --text-color: #1D3557;
+    --search-text-color: #457B9D;
+    --volume-color: #A8DADC;
+    --second-text-color: #FFFFFF;
+}
+.fourth-theme{
+    --primary-color: #FF9AA2;
+    --secondary-color: #FFF5F3;
+    --tertiary-color: #FFB7B2;
+    --quaternary-color: #FFDAC1;
+    --text-color: #5E3023;
+    --search-text-color: #B5EAD7;
+    --volume-color: #E2F0CB;
+    --second-text-color: #FFFFFF;
+}
+.fifth-theme{
+    --primary-color: #D4A76A;
+    --secondary-color: #FFF8E8;
+    --tertiary-color: #FFD700;
+    --quaternary-color: #E5C8A7;
+    --text-color: #5C3A21;
+    --search-text-color: #A78A7F;
+    --volume-color: #F0E0C8;
+    --second-text-color: #FFFFFF;
+}
+.sixth-theme{
+    --primary-color: #A0522D;
+    --secondary-color: #F5F5DC;
+    --tertiary-color: #CD5C5C;
+    --quaternary-color: #8B4513;
+    --text-color: #3E2723;
+    --search-text-color: #A1887F;
+    --volume-color: #D2B48C;
+    --second-text-color: #FFFFFF;
+}
+.seventh-theme{
+    --primary-color: #6F4E37;
+    --secondary-color: #F3E5D8;
+    --tertiary-color: #C4A484;
+    --quaternary-color: #8B5A2B;
+    --text-color: #3E2723;
+    --search-text-color: #A78A7F;
+    --volume-color: #D2B48C;
+    --second-text-color: #FFFFFF;
+}
+.eighth-theme{
+    --primary-color: #E74C3C;
+    --secondary-color: #F9E79F;
+    --tertiary-color: #F39C12;
+    --quaternary-color: #6E2C00;
+    --text-color: #1A120B;
+    --search-text-color: #E67E22;
+    --volume-color: #F5B7B1;
+    --second-text-color: #FFFFFF;
+}
+
+
 nav{
     background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), 
     url("images/nav-background.jpg");
@@ -292,7 +364,9 @@ nav{
     margin-top: 70px;
     border-radius: 25px;
     height: 330px;
-    filter: drop-shadow(0px 10px 10px rgba(105, 75, 51, 0.838));
+    filter: drop-shadow(0px 10px 10px 
+    color-mix(in srgb, var(--primary-color) 70%, transparent 30%)
+)
 }
 
 .product-card{
@@ -314,7 +388,7 @@ nav{
     width: 165px!important;
     height: 170px;
 
-    filter: drop-shadow(2px 9px 6px rgba(0, 0, 0, 0.838));
+    filter: drop-shadow(2px 9px 6px rgba(0, 0, 0, 0.686));
 }
 
 .pr-info{
@@ -376,18 +450,17 @@ nav{
     margin-top: 10px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .pr-price{
     display: flex;
     align-items: center;
-    margin-top: 10px;
 }
 
 .pr-price p{
     color: var(--volume-color);
     font-size: 14px;
-    margin-right: 3px;
 }
 
 .pr-price span{

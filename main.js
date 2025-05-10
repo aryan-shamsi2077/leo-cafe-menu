@@ -9,89 +9,101 @@ async function fetchMenuData() {
     try {
         const response = await fetch('category.json');
 
-// مدیریت تم‌ها
-const themes = {
-    hotCoffee: {},
-    coldCoffee: {},
-    coldDrink: {},
-    hotDrink: {},
-    pizza: { 
-        containerClass: "pizza-bg",
-        buttonClass: "pr-add-btn" 
-    },
-    Waffle: {},
-    pasta: {}
-};
-
-// تابع عمومی رندر
-function renderItems(items, category) {
-    const sliderPlace = document.querySelector(".swiper-wrapper");
-    sliderPlace.innerHTML = "";
-
-    items.forEach(item => {
-        const slide = document.createElement("div");
-        slide.classList.add("swiper-slide");
-        
-        let containerClass = "product-container";
-        let buttonClass = "pr-add";
-        
-        if (category === 'pizza') {
-            containerClass += " pizza-bg";
-            buttonClass += " pr-add-btn";
+        if (!response.ok) {
+            throw new Error('مشکل در دریافت داده‌ها');
         }
 
-        slide.innerHTML = `
-            <div class="${containerClass}">
-                <div class="product-card">
-                    <div class="pr-img">
-                        <img src="${item.imgSrc}" alt="${item.name}">
-                    </div>
-                    <div class="pr-info">
-                        <h3>${item.name}</h3>
-                        <div class="flex-right pr-heart-num">
-                            <div class="pr-heart-num-inner">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="pr-heart-icon">
-                                    <path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z"/>
-                                </svg>
-                                <p>۱۰۰</p>
+        const data = await response.json();
+        return data;
+
+    } catch (error) {
+        console.error('خطا در بارگذاری منو:', error);
+        return null;
+    }
+}
+
+
+fetchMenuData().then(data => {
+    if (data) {
+        console.log(data.categories);
+        // renderCategories(data.categories);   
+        renderCategories(data.categories)
+        renderProducts(data.categories[0].items);
+    } else {
+        console.log('داده‌ای دریافت نشد');
+    }
+});
+
+function renderCategories(categories) {
+    const categoriesUl = document.querySelector(".categories-ul");
+    categoriesUl.innerHTML = '';
+
+    categories.forEach(category => {
+        const li = document.createElement('li');
+        li.className = 'category-item';
+        li.innerHTML = `
+            <button class="category-item-inner" data-category-id="${category.id}">
+                <p class="category-name">${category.title}</p>
+            </button>
+        `;
+        categoriesUl.appendChild(li);
+    });
+}
+
+document.querySelector('.categories-ul').addEventListener('click', async (e) => {
+    if (e.target.closest('.category-item-inner')) {
+        const categoryId = e.target.closest('.category-item-inner').dataset.categoryId;
+        const data = await fetchMenuData();
+        const selectedCategory = data.categories.find(cat => cat.id === categoryId);
+        renderProducts(selectedCategory.items);
+    }
+});
+
+function renderProducts(products) {
+    const swiperWrapper = document.querySelector('.swiper-wrapper');
+    swiperWrapper.innerHTML = '';
+
+    products.forEach(product => {
+        swiperWrapper.innerHTML += `
+            <div class="swiper-slide">
+                <div class="product-container">
+                    <div class="product-card">
+                        <div class="pr-img">
+                            <img src="${product.imgSrc}" alt="${product.name}">
+                        </div>
+                        <div class="pr-info">
+                            <h3>${product.name}</h3>
+                            <div class="pr-heart-num">
+                                <div class="pr-heart-num-inner">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="pr-heart-icon">
+                                        <path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z"/>
+                                    </svg>
+                                    <p>۱۰۰</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="flex-right pr-volume">
-                            <span>${item.volume}</span>
-                            <p>حجم</p>
-                        </div>
-                        <div class="flex-between price-add">
-                            <button class="${buttonClass}">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="20" stroke-width="1.5" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/>
-                                </svg>
-                            </button>
-                            <div class="pr-price">
-                                <p>T</p>
-                                <span>${item.price}</span>
+                            <div class="pr-volume">
+                                <span>${product.size}</span>
+                                <p>حجم</p>
+                            </div>
+                            <div class="price-add">
+                                <button class="pr-add">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="20" stroke-width="1.5" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/>
+                                    </svg>
+                                </button>
+                                <div class="pr-price">
+                                    <span>${product.price} تومان</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>`;
-        sliderPlace.appendChild(slide);
     });
-}
-
-function setupCategoryButtons(data) {
-    const buttons = {
-        hotCoffee: document.querySelector(".hotCoffee"),
-        coldCoffee: document.querySelector(".coldCoffee"),
-        coldDrink: document.querySelector(".coldDrink"),
-        hotDrink: document.querySelector(".hotDrink"),
-        pizza: document.querySelector(".pizza"),
-        Waffle: document.querySelector(".Waffle"),
-        pasta: document.querySelector(".pasta")
-    };
-
-    Object.keys(buttons).forEach(category => {
-        buttons[category].addEventListener("click", () => {
-            renderItems(data.category[category], category);
-        });
-    });
+    
+    // تنظیم مجدد Swiper
+    swiper.params.slidesPerView = "auto";
+    swiper.params.centeredSlides = true;
+    swiper.params.spaceBetween = 30;
+    swiper.update();
 }
