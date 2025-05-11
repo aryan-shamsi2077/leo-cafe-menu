@@ -26,7 +26,7 @@ async function fetchMenuData() {
 fetchMenuData().then(data => {
     if (data) {
         console.log(data.categories[0].items);
-        // renderCategories(data.categories);   
+
         renderCategories(data.categories)
         renderProducts(data.categories[0].items);
     } else {
@@ -91,7 +91,7 @@ function renderProducts(products) {
                             </div>
                             <div class="pr-volume">
                                 <span>${product.size}</span>
-                                <p>حجم</p>
+                                <p>سایز</p>
                             </div>
                             <div class="price-add">
                                 <button class="pr-add">
