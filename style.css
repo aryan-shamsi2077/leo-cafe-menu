@@ -583,8 +583,43 @@ nav{
     display: block;
 }
 
-.back-and-favorite-btns{
-    display: none;
+.back-and-favourite-btns-inner{
+    display: flex;
+    align-items: center;
+    margin: 0 13px;
+}
+
+.back-button-modal{
+    background-color: var(--primary-color);
+    border: none;
+    height: 45px;
+    position: absolute;
+    top: 30px;
+}
+
+.modal-back-btn{
+    color: var(--second-text-color);
+}
+
+.favourite-button-modal{
+    background-color: var(--primary-color);
+    border: none;
+    position: absolute;
+    top: 35px;
+    right: 19.5px;
+}
+
+.modal-favourite-btn{
+    color: var(--second-text-color);
+}
+
+.favorite-button-inner{
+    border: 2.5px solid var(--second-text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-radius: 50px;
 }
 
 .product-modal-img-bg{
@@ -654,6 +689,7 @@ nav{
 .product-size-sec{
     margin-top: 10px;
 }
+
 .product-size-sec-title{
     font-size: 16px;
     font-weight: bold;
@@ -690,5 +726,88 @@ nav{
 .product-about p{
     font-size: 12px;
     line-height: 16px;
+}
+
+.product-size-add-num{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.product-size-title{
+    display: flex;
+}
+
+.product-size-text{
+    color: var(--volume-color);
+    margin-left: 5px;
+}
+
+.product-size-num{
+    font-size: 13px;
+    margin-top: 3px;
+}
+
+.number-of-product-box{
+    display: flex;
+    border: 1px solid var(--tertiary-color);
+    border-radius: 50px;
+    position: relative;
+    bottom: 5px;
+    padding: 2px 0;
+}
+
+.reduce-product{
+    margin: 0 20px 0 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.increase-product{
+    margin: 0 15px 0 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.number-of-product{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2px;
+}
+
+.add-list-buy-btn{
+    margin: 10px 0 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buy-product-btm-modal button{
+    color: var(--second-text-color);
+    background-color: var(--tertiary-color);
+    border: none;
+    padding: 16.5px 80px;
+    border-radius: 50px;
+}
+
+.add-list-product-modal-btn button{
+    border: 0.5px solid rgba(128, 128, 128, 0.419);
+    padding: 16px 16px 16px 16px;
+    border-radius: 50px;
+    background-color: var(--second-text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.add-list-btn-m{
+    color: rgba(0, 0, 0, 0.627);
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    padding: 0;
 }
 /* product modal style end */
