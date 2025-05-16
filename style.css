@@ -5,6 +5,10 @@
     text-align: right;
 }
 
+body.modal-open {
+    overflow: hidden;
+}
+
 @font-face{
     font-family: 'Vazirmatn-thin';
     src: url(font/vazirmatn/Vazirmatn-Thin.ttf);
@@ -170,6 +174,7 @@ nav{
     font-size: 16px;
     margin-right: 3px;
 }
+
 
 .nav-searchsec{
     display: flex;
@@ -574,13 +579,15 @@ nav{
 
 /* product modal style start */
 .product-modal{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    background-color: white;
-    z-index: 999;
     width: 100%;
-    display: block;
+    height: 100%;
+    background-color: white;
+    z-index: 1000;
+    overflow-y: auto;
+    display: none; /* مخفی در ابتدا */
 }
 
 .back-and-favourite-btns-inner{
@@ -637,7 +644,8 @@ nav{
 }
 
 .product-modal-img{
-    width: 233px;
+    width: auto;
+    max-width: 233px;
     height: auto;
     max-height: 235px;
     object-fit: contain;
@@ -794,7 +802,7 @@ nav{
 
 .add-list-product-modal-btn button{
     border: 0.5px solid rgba(128, 128, 128, 0.419);
-    padding: 16px 16px 16px 16px;
+    padding: 16px;
     border-radius: 50px;
     background-color: var(--second-text-color);
     display: flex;
@@ -809,5 +817,56 @@ nav{
     height: 20px;
     margin: 0;
     padding: 0;
+}
+
+@media (max-width: 425px){
+    .product-size-sec{
+    margin-top: 15px;
+    }
+    .product-size-group{
+        margin-top: 8px;
+    }
+    .product-size-btn{
+    padding: 10px 35px;
+    font-size: 14px;
+    }
+    .product-about-sec-title{
+        margin-bottom: 5px;
+    }
+    .product-size-add-num{
+        margin-top: 15px
+    }
+    .buy-product-btm-modal button{
+        padding: 18px 100px;
+        font-size: 16px;
+    }
+    .add-list-product-modal-btn button{
+    padding: 20px;
+    }
+}
+
+@media (max-width: 363px){
+    .product-size-sec{
+    margin-top: 10px;
+    }
+    .product-size-group{
+        margin-top: 13px;
+    }
+    .product-size-btn{
+    padding: 6px 22px;
+    font-size: 13px;
+    }
+    .product-about-sec-title{
+        margin-bottom: 0;
+    }
+    .product-size-add-num{
+        margin-top: 10px
+    }
+    .buy-product-btm-modal button{
+        padding: 16.5px 80px;
+    }
+    .add-list-product-modal-btn button{
+    padding: 16px;
+    }
 }
 /* product modal style end */
