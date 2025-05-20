@@ -587,7 +587,7 @@ nav{
     background-color: white;
     z-index: 1000;
     overflow-y: auto;
-    display: none; /* مخفی در ابتدا */
+    display: none;
 }
 
 .back-and-favourite-btns-inner{
@@ -870,3 +870,19 @@ nav{
     }
 }
 /* product modal style end */
+
+/* shopping cart style start */
+
+.shopping-card{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 1000;
+    overflow-y: auto;
+    display: block;
+}
+
+/* shopping cart style end */
