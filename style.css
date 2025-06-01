@@ -879,7 +879,8 @@ nav{
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: white;
+    background-color: #080909;
+    color: white;
     z-index: 1000;
     overflow-y: auto;
     display: block;
@@ -889,14 +890,14 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 10px;
+    padding: 15px;
     list-style: none;
 }
 
 .sh-c-svg-btn{
-    background-color: white;
+    background-color: #101211;
+    border: none;
     padding: 3px;
-    border: 1.5px solid rgb(172, 172, 172);
     border-radius: 8px;
 }
 
@@ -906,5 +907,88 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #fb9c45;
+}
+
+.chosen-products-group{
+    display: flex;
+    flex-direction: column;
+    padding: 40px 30px 20px 30px;
+    list-style: none;
+    height: 420px;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.chosen-product{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.chosen-product-pic-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chosen-product-line{
+    width: 80%;
+    height: 1px;
+    background-color: #fb9c45;
+    margin: auto;
+}
+
+.chosen-product-pic-box{
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #101211;
+    border-radius: 10px;
+}
+
+.chosen-product-pic{
+    max-width: 50px;
+    max-height: 70px;
+}
+
+.chosen-product-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: right;
+    padding-right: 10px;
+}
+.chosen-product-name{
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+.chosen-product-size{
+    font-size: 12px;
+    color: #a2a2a2;
+    margin-bottom: 3px;
+}
+
+.chosen-product-price{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.chosen-product-quantity{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chosen-product-btn{
+    background-color: #0f1111;
+    color: #fb9c45;
+    padding: 0 4px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
 }
 /* shopping cart style end */
