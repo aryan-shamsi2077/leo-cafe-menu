@@ -913,7 +913,7 @@ nav{
 .chosen-products-group{
     display: flex;
     flex-direction: column;
-    padding: 40px 30px 20px 30px;
+    padding: 30px 30px 20px 30px;
     list-style: none;
     height: 420px;
     overflow-x: auto;
@@ -990,5 +990,41 @@ nav{
     border: none;
     border-radius: 5px;
     font-size: 18px;
+}
+
+.total-price-checkout-sec{
+    margin: 20px 30px;
+}
+
+.total-price-title{
+    font-size: 19px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.total-price-value{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.checkout-sec{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkout-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 7px 0;
+    font-size: 19px;
+    font-weight: bold;
+    color: white;
+    background-color: #e0661d;
+    border: none;
+    border-radius: 10px;
+    margin-top: 10px;
 }
 /* shopping cart style end */
