@@ -169,6 +169,26 @@ nav{
     width: 45px;
 }
 
+.cafe-info{
+    position: absolute;
+    top: 60px;
+    padding: 15px 10px;
+    display: block;
+}
+
+.info-list{
+    list-style: none;
+}
+
+.info-items{
+    margin-top: 5px;
+}
+
+.info-items a{
+    color: black;
+    margin-top: 50px;
+}
+
 .location p{
     color: var(--text-color);
     font-size: 16px;
@@ -260,6 +280,7 @@ nav{
     padding: 10px 15px;
     border: none;
     border-radius: 25px;
+    cursor: pointer;
 }
 .category-item-inner.active {
     background-color: var(--tertiary-color);
@@ -275,12 +296,6 @@ nav{
 .categories-ul::-webkit-scrollbar {
     width: 0;
     height: 0;
-}
-
-
-.category-item :hover{
-    background-color: var(--tertiary-color);
-    color: var(--second-text-color);
 }
 
 .category-name{
@@ -501,7 +516,7 @@ nav{
     border-radius: 50px;
     display: flex;
     border: none;
-
+    cursor: pointer;
 }
 
 @media (max-width: 426px){
@@ -602,6 +617,7 @@ nav{
     height: 45px;
     position: absolute;
     top: 30px;
+    cursor: pointer;
 }
 
 .modal-back-btn{
@@ -614,6 +630,7 @@ nav{
     position: absolute;
     top: 35px;
     right: 19.5px;
+    cursor: pointer;
 }
 
 .modal-favourite-btn{
@@ -718,7 +735,7 @@ nav{
     font-weight: bold;
 }
 
-.product-size-btn:hover{
+.product-size-btn.active{
     background-color: var(--tertiary-color);
     color: var(--second-text-color);
 }
@@ -883,7 +900,23 @@ nav{
     color: white;
     z-index: 1000;
     overflow-y: auto;
-    display: block;
+    display: none;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    background-color: var(--tertiary-color);
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    display: none;
 }
 
 .shopping-cart-header{
