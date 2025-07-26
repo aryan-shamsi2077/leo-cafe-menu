@@ -6,7 +6,7 @@
     <title>LeoCafe</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
-
+    <script src="main.js" defer></script>
 </head>
 <body>
     <nav>
@@ -64,6 +64,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="shopping-icon">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
                         </svg>
+                        <div class="cart-badge"></div>
 
                     </li>
 
@@ -132,45 +133,13 @@
 
         </ul>
 
-        <ul class="chosen-products-group">
-
-            <li class="chosen-product-li">
-
-                <div class="chosen-product-line"></div>
-
-                <div class="chosen-product">
-
-                    <div class="chosen-product-quantity">
-                        <button class="increase-ch chosen-product-btn">+</button>
-                        <span class="chosen-product-count">1</span>
-                        <button class="decrease-ch chosen-product-btn">-</button>
-                    </div>
-
-                    <div class="chosen-product-pic-info">
-
-                        <div class="chosen-product-info">
-                            <h3 class="chosen-product-name">لته</h3>
-                            <p class="chosen-product-size">120 ml</p>
-                            <span class="chosen-product-price">t 130</span>
-                        </div>
-
-                        <div class="chosen-product-pic-box">
-                            <img src="images/latte-pic.png" class="chosen-product-pic" alt="">
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </li>
-            
-        </ul>
+        <ul class="chosen-products-group"></ul>
 
         <div class="total-price-checkout-sec">
 
             <div class="total-price-sec">
                 <p class="total-price-title">: مبلغ کل</p>
-                <span class="total-price-value">t 720</span>
+                <span class="total-price-value"></span>
             </div>
 
             <div class="checkout-sec">
@@ -184,6 +153,5 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="main.js"></script>
 </body>
 </html>
