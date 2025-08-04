@@ -138,6 +138,17 @@ body.modal-open {
     --second-text-color: #FFFFFF;
 }
 
+.tenth-theme {
+    --primary-color: #8B0000;
+    --secondary-color: #FFF5EE;
+    --tertiary-color: #CD5C5C;
+    --quaternary-color: #A0522D;
+    --text-color: #3E2723;
+    --search-text-color: #8B4513; 
+    --volume-color: #D2B48C;
+    --second-text-color: #FFFFFF;
+}
+
 nav{
     background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), 
     url("images/nav-background.jpg");
@@ -167,6 +178,7 @@ nav{
 
 .logo img{
     width: 45px;
+    cursor: pointer;
 }
 
 .cafe-info{
@@ -247,6 +259,7 @@ nav{
     height: 25px;
     color: var(--text-color);
     margin-bottom: 5px;
+    cursor: pointer;
 }
 
 .location-icon{

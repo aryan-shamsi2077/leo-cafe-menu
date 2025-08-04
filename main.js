@@ -245,8 +245,23 @@ function showProductModal(product){
         modal.style.display = 'none';
     });
 
+    let quantity = 1;
+    const quantityDisplay = modal.querySelector('.number-of-product-box span');
+
+    modal.querySelector('.reduce-product').addEventListener('click', () => {
+        if (quantity > 1) {
+            quantity--;
+            quantityDisplay.textContent = quantity;
+        }
+    });
+
+    modal.querySelector('.increase-product').addEventListener('click', () => {
+        quantity++;
+        quantityDisplay.textContent = quantity;
+    });
+
     document.querySelector('.add-shopping-cart').addEventListener('click', () => {
-        addToCart(product);
+        addToCart(product, quantity);
         updateCartDisplay();
         document.querySelector('.shopping-cart').style.display = 'block';
         modal.style.display = 'none';
@@ -298,7 +313,6 @@ function handleCartActions() {
         }
     });
 
-    // رویداد خالی کردن سبد خرید
     document.querySelector('.sh-c-trash').addEventListener('click', () => {
         cartItems = [];
         updateCartDisplay();
@@ -329,20 +343,18 @@ fetchMenuData().then(data => {
         });
     });
 
-    // مقداردهی اولیه
     handleCartActions();
 });
 
-// انتقال تابع addToCart به بیرون از fetchMenuData.then()
-function addToCart(product) {
+function addToCart(product, quantity = 1) {
     const existingItem = cartItems.find(item => item.id === product.id);
     
     if (existingItem) {
-        existingItem.quantity += 1;
+        existingItem.quantity += quantity;
     } else {
         cartItems.push({
             ...product,
-            quantity: 1
+            quantity: quantity
         });
     }
     
@@ -351,13 +363,11 @@ function addToCart(product) {
     updateCartBadge();
 }
 
-// اضافه کردن رویداد کلیک برای آیکون سبد خرید
 document.querySelector('.shopping-sec').addEventListener('click', () => {
     document.querySelector('.shopping-cart').style.display = 'block';
     updateCartDisplay();
 });
 
-// اضافه کردن رویداد کلیک برای دکمه بازگشت
 document.querySelector('.sh-c-back').addEventListener('click', () => {
     document.querySelector('.shopping-cart').style.display = 'none';
 });
